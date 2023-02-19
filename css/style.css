@@ -52,7 +52,7 @@ body._lock {
 
 @media (min-width: 1200px) {
   .main-header {
-    background-image: url("/img/background-big.svg");
+    background-image: url("../img/background-big.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -61,7 +61,7 @@ body._lock {
 }
 @media (max-width: 1200px) {
   .main-header {
-    background-image: url("/img/background-top.svg");
+    background-image: url("../img/background-top.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -97,7 +97,7 @@ body._lock {
   }
 }
 .main-header__logo {
-  background-image: url("/img/logo-main.svg");
+  background-image: url("../img/logo-main.svg");
   background-repeat: no-repeat;
   display: block;
   width: 184px;
@@ -105,7 +105,7 @@ body._lock {
 }
 @media (max-width: 1200px) {
   .main-header__logo {
-    background-image: url("/img/logo.svg");
+    background-image: url("../img/logo.svg");
     background-repeat: no-repeat;
     display: block;
     width: 138px;
@@ -150,7 +150,7 @@ body._lock {
 }
 @media (min-width: 2300px) {
   .main-header::before {
-    background-image: url("/img/main-screen.svg");
+    background-image: url("../img/main-screen.svg");
     top: 164px;
     right: 170px;
     width: 930px;
@@ -160,7 +160,7 @@ body._lock {
 }
 @media (min-width: 1450px) and (max-width: 2300px) {
   .main-header::before {
-    background-image: url("/img/main-screen-large.svg");
+    background-image: url("../img/main-screen-large.svg");
     top: 164px;
     right: 0px;
     width: 690px;
@@ -169,7 +169,7 @@ body._lock {
 }
 @media (min-width: 1200px) and (max-width: 1450px) {
   .main-header::before {
-    background-image: url("/img/main-screen-large-v2.svg");
+    background-image: url("../img/main-screen-large-v2.svg");
     top: 164px;
     right: 0px;
     width: 500px;
@@ -183,7 +183,7 @@ body._lock {
 }
 .main-header::after {
   content: "";
-  background-image: url("/img/main-screen-small.svg");
+  background-image: url("../img/main-screen-small.svg");
   position: absolute;
   top: 288px;
   right: 400px;
@@ -830,7 +830,7 @@ body._touch .main-nav__list > li .main-nav__arrow {
 }
 
 .pricing {
-  background-image: url("/img/background-bottom.svg");
+  background-image: url("../img/background-bottom.svg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -838,7 +838,7 @@ body._touch .main-nav__list > li .main-nav__arrow {
 }
 @media (min-width: 1200px) {
   .pricing {
-    background-image: url("/img/background-bottom-large.svg");
+    background-image: url("../img/background-bottom-large.svg");
   }
 }
 .pricing__wrapper {
@@ -961,7 +961,7 @@ body._touch .main-nav__list > li .main-nav__arrow {
 }
 .list__description::after {
   content: "";
-  background-image: url(/img/splitter.svg);
+  background-image: url(../img/splitter.svg);
   width: 220px;
   height: 1px;
   position: absolute;
@@ -1089,7 +1089,7 @@ element:last-child.style {
 }
 .page-footer__body::before {
   content: "";
-  background-image: url(/img/splitter-v2.svg);
+  background-image: url(../img/splitter-v2.svg);
   width: 100%;
   height: 1px;
   position: absolute;
@@ -1098,7 +1098,7 @@ element:last-child.style {
   color: #2A407C;
 }
 .page-footer__logo {
-  background-image: url("/img/logo-bottom.svg");
+  background-image: url("../img/logo-bottom.svg");
   background-repeat: no-repeat;
   display: block;
   width: 138px;

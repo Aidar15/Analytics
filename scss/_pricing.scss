@@ -1,14 +1,14 @@
 $screensz1: 1200px;
 
 .pricing {
-    background-image: url("/img/background-bottom.svg");
+    background-image: url("../img/background-bottom.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     background-position: left top;
 
     @media (min-width: $screensz1) {
-        background-image: url("/img/background-bottom-large.svg");
+        background-image: url("../img/background-bottom-large.svg");
     }
 
     &__wrapper {
@@ -134,7 +134,7 @@ $screensz1: 1200px;
 
     &__description::after {
         content: "";
-        background-image: url(/img/splitter.svg);
+        background-image: url(../img/splitter.svg);
         width: 220px;
         height: 1px;
         position: absolute;
@@ -263,7 +263,7 @@ element:last-child.style {
 
     &__body::before {
         content: "";
-        background-image: url(/img/splitter-v2.svg);
+        background-image: url(../img/splitter-v2.svg);
         width: 100%;
         height: 1px;
         position: absolute;
@@ -273,7 +273,7 @@ element:last-child.style {
     }
 
     &__logo {
-        background-image: url('/img/logo-bottom.svg');
+        background-image: url('../img/logo-bottom.svg');
         background-repeat: no-repeat;
         display: block;
         width: 138px;

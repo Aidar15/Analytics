@@ -2,7 +2,7 @@ $screensz1: 1200px;
 
 .main-header {
     @media (min-width: $screensz1) {
-        background-image: url("/img/background-big.svg");
+        background-image: url("../img/background-big.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -10,7 +10,7 @@ $screensz1: 1200px;
     }
 
     @media (max-width: $screensz1) {
-        background-image: url("/img/background-top.svg");
+        background-image: url("../img/background-top.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -48,14 +48,14 @@ $screensz1: 1200px;
 
     &__logo {
        
-        background-image: url('/img/logo-main.svg');
+        background-image: url('../img/logo-main.svg');
         background-repeat: no-repeat;
         display: block;
         width: 184px;
         height: 40px;
 
         @media (max-width: $screensz1) {
-            background-image: url('/img/logo.svg');
+            background-image: url('../img/logo.svg');
             background-repeat: no-repeat;
             display: block;
             width: 138px;
@@ -101,7 +101,7 @@ $screensz1: 1200px;
         border-bottom-left-radius: 30px;
 
         @media (min-width: 2300px) {
-            background-image: url('/img/main-screen.svg');
+            background-image: url('../img/main-screen.svg');
             top: 164px;
             right: 170px;
             width: 930px;
@@ -110,7 +110,7 @@ $screensz1: 1200px;
         }
 
         @media (min-width: 1450px) and (max-width: 2300px) {
-            background-image: url('/img/main-screen-large.svg');
+            background-image: url('../img/main-screen-large.svg');
             top: 164px;
             right: 0px;
             width: 690px;
@@ -118,7 +118,7 @@ $screensz1: 1200px;
         }
 
         @media (min-width: 1200px) and (max-width: 1450px) {
-            background-image: url('/img/main-screen-large-v2.svg');
+            background-image: url('../img/main-screen-large-v2.svg');
             top: 164px;
             right: 0px;
             width: 500px;
@@ -132,7 +132,7 @@ $screensz1: 1200px;
     
     &::after {
         content: "";
-        background-image: url('/img/main-screen-small.svg');
+        background-image: url('../img/main-screen-small.svg');
         position: absolute;
         top: 288px;
         right: 400px;
