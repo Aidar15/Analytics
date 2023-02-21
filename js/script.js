@@ -82,49 +82,27 @@ if (menuLinks.length>0) {
 }
  
 
+
 const swiper = new Swiper('.swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
     initialSlide: 1,
     slideActiveClass: 'swiper-slide-active',
+    slidesPerView: 1.3,
+    spaceBetween: 20,
     breakpoints: {
-
-        250: {
-            slidesPerView: 1.3,
-            spaceBetween: 10
-        },
-
-        320: {
-            slidesPerView: 1.5,
-            spaceBetween: 20
-        },
-
-        500: {
-            slidesPerView: 1.8,
-            spaceBetween: 30
-        },
-
-        700: {
-            slidesPerView: 2,
-            spaceBetween: 50
-        },
-
-        900: {
-            slidesPerView: 2.5,
-            spaceBetween: 100
-        },
-
-        1200: {
+        960: {
+            enabled: false,
             slidesPerView: 3,
-            spaceBetween: 80
+            spaceBetween: 50,
         }
     },
- coverflowEffect: {
+coverflowEffect: {
    rotate: 0,
    stretch: 0,
    depth: 0,
    modifier: 0,
  },
  });
-    
+

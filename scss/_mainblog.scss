@@ -1,15 +1,19 @@
-$screensz1: 1200px;
+$screensz1: 960px;
 
 .main-blog {
-    
     &__wrapper {
         margin: 0 auto;
         max-width: 1180px;
         margin-top: 134px;
+        padding: 0 20px;
 
         @media (max-width: $screensz1) {
             margin-top: 50px;
             padding: 0 20px;
+        }
+
+        @media (min-width: $screensz1) and (max-width: 1200px) {
+            margin-top: 80px;
         }
     }
 }
@@ -17,7 +21,9 @@ $screensz1: 1200px;
 .features {
 
     &__body {
+        display: flex;
         justify-content: center;
+        flex-direction: column;
         @media (max-width:$screensz1) {
             display: flex;
             flex-direction: column;
@@ -25,9 +31,6 @@ $screensz1: 1200px;
     }
 
     &__intro {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
         margin: 0 auto;
         max-width: 1060px;
         text-align: center;
@@ -63,19 +66,14 @@ $screensz1: 1200px;
 
     &__items {
         display: flex;
-        flex-direction: row;
         
         @media (max-width:$screensz1) {
             flex-direction: column;
         }
-        
     }
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     margin-bottom: 130px;
     @media (max-width:$screensz1) {
@@ -95,13 +93,11 @@ $screensz1: 1200px;
         &__picture {
             display: flex;
             justify-content: center;
-            flex-shrink: 0;
             margin-bottom: 26px;
             @media (max-width:$screensz1) {
                 display: block;
                 width: 60px;
                 height: 60px;
-                flex-shrink: 0;
             }
         }
 
@@ -123,10 +119,6 @@ $screensz1: 1200px;
             } 
         }
 
-        &__header:hover {
-            text-decoration: underline;
-        }
-
         &__description {
             font-size: 16px;
             color: #8794BA;
@@ -146,15 +138,9 @@ $screensz1: 1200px;
 
 
 .additions {
-    &__body {
-        display: flex;
-        flex-direction: column;
-    }
 
     &__item {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         margin-bottom: 120px;
         @media (max-width:$screensz1) {
             display: flex;
@@ -187,18 +173,12 @@ $screensz1: 1200px;
         } 
     }
 
-    &__header:hover {
-        text-decoration: underline;
-    }
-
     &__text {
         max-width: 480px;
         color: #8794BA;
-        font-weight: 400;
         line-height: 27px;
         font-size: 18px;
         @media (max-width:$screensz1) {
-            font-size: 14px;
             line-height: 20px;
             margin-bottom: 30px;
             max-width: none;
@@ -226,7 +206,7 @@ $screensz1: 1200px;
         padding: 0;
         box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
         border-radius: 16.75px;
-        
+        transition: transform 0.3s ease 0s;
         @media (max-width:$screensz1) {
             margin: 0 auto 60px auto;
             height: auto;
@@ -234,8 +214,10 @@ $screensz1: 1200px;
     }
 
     &__image:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease 0s;
+        @media (min-width:$screensz1) {
+            transform: scale(1.1);
+            transition: transform 0.3s ease 0s;
+        }
     }
 
     &__item:last-child &__picture &__image  {

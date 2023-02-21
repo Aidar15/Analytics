@@ -1,11 +1,10 @@
-$screensz1: 1200px;
+$screensz1: 960px;
 
 .main-header {
     @media (min-width: $screensz1) {
         background-image: url("../img/background-big.svg");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100%;
         background-position: left bottom;
     }
 
@@ -13,7 +12,6 @@ $screensz1: 1200px;
         background-image: url("../img/background-top.svg");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100%;
         background-position: left bottom;
     }
 
@@ -29,7 +27,6 @@ $screensz1: 1200px;
 
     &__wrapper {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: 140px;
@@ -47,7 +44,6 @@ $screensz1: 1200px;
     }
 
     &__logo {
-       
         background-image: url('../img/logo-main.svg');
         background-repeat: no-repeat;
         display: block;
@@ -67,27 +63,19 @@ $screensz1: 1200px;
 
     &__right {
         display: flex;
-        flex-direction: row;
-        width: 90px;
         justify-content: space-between;
-        @media (min-width: $screensz1) {
-            width: 325px;
-        }
     }
 
     &__left {
         @media(min-width: $screensz1) {
-        display: flex;
-        flex-direction: row;
-        width: 632px;
-        justify-content: space-between;
-        align-items: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
     &__stats {
         display: flex;
-        flex-direction: row;
         justify-content: center;
     }
 
@@ -125,6 +113,14 @@ $screensz1: 1200px;
             height: 555px;
         }
 
+        @media (min-width: $screensz1) and (max-width: 1200px) {
+            background-image: url('../img/main-screen-large-v3.svg');
+            top: 164px;
+            right: 0px;
+            width: 430px;
+            height: 555px;
+        }
+
         @media (max-width: $screensz1) {
             display: none;
         }
@@ -153,7 +149,11 @@ $screensz1: 1200px;
             right: 220px;
         }
 
-        @media (max-width: 1200px) {
+        @media (min-width:$screensz1) and (max-width: 1200px) {
+            right: 130px;
+        }
+
+        @media (max-width: $screensz1) {
             display: none;
         } 
     }
@@ -170,7 +170,7 @@ $screensz1: 1200px;
         margin: 0 auto;
         height: 100%;
         transform: translate(-100%, 0px);
-        background-color: rgba(23, 39, 85, 0.95);
+        background-color: #172755;
         padding: 80px 0px;
         transition: transform 0.3s ease 0s;
         overflow: auto;
@@ -196,21 +196,21 @@ $screensz1: 1200px;
 
     &__list {
         display: flex;
-        flex-direction: row;
-        width: 352px;
         justify-content: space-between;
 
         @media (max-width: $screensz1) {
             display: flex;
             flex-direction: column;
             width: 100%;
+            
         }
     }
 
-    &__list li {
+    &__list > li {
         position: relative;
-        padding: 10px 0;
         flex-wrap: wrap;
+        padding: 10px 0;
+        margin: 0 36px 0px 0px;
 
         @media (max-width: $screensz1) {
             padding: 20px 0;
@@ -220,7 +220,11 @@ $screensz1: 1200px;
 
     &__list > li._active .main-nav__sub-list {
         display: block;
-    } 
+    }
+
+    &__list li:last-child {
+        margin-right: 0;
+    }
 
     &__item  {
         color: #8794BA;
@@ -233,31 +237,32 @@ $screensz1: 1200px;
     }
 
     &__item:hover {
-        text-decoration: underline;
+        color: #fff;
     }
 
     &__sub-list {
         position: absolute;
         top: 100%;
+        left: 0%;
         background-color: #fff;
-        min-width: 200px;
+        width: 200px;
         box-shadow: 0px 18px 90px -15px rgba(25, 42, 89, 0.4);
         border-radius: 5px;
-        flex: 1 1 100%;
-
+        padding: 10px 10px;
+        
         @media (min-width:$screensz1) {
-            transform: translate(0px, 10%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease 0s;
-            pointer-events: none;
-        }
-
-        @media (max-width:$screensz1) {
-            position: relative;
             display: none;
         }
 
+        @media (max-width:$screensz1) {
+            display: none;
+            position: relative;
+            flex: 1 1 100%;
+        }
+    }
+
+    &__sub-list li {
+        padding: 15px 5px;
     }
 
     &__sub-link {
@@ -281,10 +286,7 @@ $screensz1: 1200px;
 /* Для js суб-меню*/
 
 body._pc .main-nav__list > li:hover .main-nav__sub-list  {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    pointer-events: all;
+    display: block;
 }
 
 body._touch .main-nav__list > li {
@@ -295,7 +297,6 @@ body._touch .main-nav__list > li {
 body._touch .main-nav__item {
     flex: 1 1 auto;
 }
-
 
 body._touch .main-nav__arrow {
     display: block;
@@ -312,6 +313,11 @@ body._touch .main-nav__list > li._active .main-nav__sub-list  {
     visibility: visible;
     transform: translate(0px, 0px);
     pointer-events: all;
+   
+
+    @media (max-width: $screensz1) {
+        margin-top: 15px;
+    }
 }
 
 body._touch .main-nav__list > li._active .main-nav__arrow {
@@ -328,29 +334,28 @@ body._touch .main-nav__list > li .main-nav__arrow {
 
 .header-sign {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: $screensz1) {
-        width: 325px;
-    }
-        
+
     &__up {
         @media (max-width: $screensz1) {
             display: none;
         }  
     }
 
-    &__in {
-        flex-shrink: 0;
-    }
-
     &__up,
     &__in {
         color: #8794BA;
         font-size: 16px;
-        @media (min-width: $screensz1) {
+
+        @media (min-width: $screensz1) and (max-width: 1200px) {
+            padding: 10px 15px;
+            border: 1px solid transparent;
+        }
+
+        @media (min-width: 1200px) {
             padding: 10px 53px;
+            border: 1px solid transparent;
         }
     }
 
@@ -429,14 +434,11 @@ body._touch .main-nav__list > li .main-nav__arrow {
 }
 
 .stats {
-
     &__wrapper {
         display: flex;
-        flex-direction: row;
-        margin-top: 23px;
         position: relative;
         width: 1181px;
-        margin: 0 auto;
+        margin: 23px auto 0px auto;
         padding: 0 50px;
 
     @media (max-width: $screensz1) {
@@ -481,7 +483,17 @@ body._touch .main-nav__list > li .main-nav__arrow {
         @media (max-width: $screensz1) {
             width: 100%;
             margin-top: 0;
-        } 
+            height: 400px;
+        }
+        
+        @media (min-width: $screensz1) and (max-width: 1200px) {
+            width: 400px;
+            height: 473px;
+        }
+
+        @media (min-width: 1200px) {
+            height: 573px;
+        }
     }
 
     &__header {
@@ -495,10 +507,6 @@ body._touch .main-nav__list > li .main-nav__arrow {
             line-height: 37px;
             font-weight: 700;
         } 
-    }
-
-    &__header:hover {
-        text-decoration: underline;
     }
 
     &__description {
@@ -525,30 +533,27 @@ body._touch .main-nav__list > li .main-nav__arrow {
         align-self: flex-start;
         max-width: 238px;
         margin-top: 49px;
-        margin-bottom: 258px;
+        background-color: #EF2A82;
+        transition: all 0.3s ease 0s;
 
         @media (max-width:375px) {
             padding: 15px 60px;
             align-self: center;
-            margin-bottom: 128px;
         }
         @media (min-width:375px) and (max-width: 700px) {
             padding: 15px 128px;
-            margin-top: 26px;
-            margin-bottom: 128px;
             max-width: 600px;
             align-self: center;
         } 
         @media (min-width: 700px) and (max-width: $screensz1) {
             padding: 15px 128px;
-            margin-top: 26px;
-            margin-bottom: 200px;
             max-width: 600px;
             align-self: center;
         } 
     }
 
     &__try:hover {
-        background-color: #EF2A82;
+        transition: all 0.3s ease 0s;
+        transform: scale(1.1);
     }
 }

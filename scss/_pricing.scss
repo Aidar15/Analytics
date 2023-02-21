@@ -1,4 +1,4 @@
-$screensz1: 1200px;
+$screensz1: 960px;
 
 .pricing {
     background-image: url("../img/background-bottom.svg");
@@ -76,8 +76,10 @@ $screensz1: 1200px;
         align-items: center;
         border-radius: 30px;
         width: 340px;
+        height: 440px;
         cursor: pointer;
         background-color: #0F1F4B;
+        
         @media (max-width: $screensz1) {
             width: 280px;
             height: 358px;
@@ -90,28 +92,65 @@ $screensz1: 1200px;
             background-color: #fff;
         }
     }
+
+    &__list:hover {
+        @media (min-width: $screensz1) {
+            background-color: #fff;
+        }
+    }
+
+    &__list:hover .list__header {
+        @media (min-width: $screensz1) {
+            color: #172755;
+        }
+    }
+
+    &__list:hover .list__price {
+        @media (min-width: $screensz1) {
+            color: #172755;
+        }
+    }
+
+    &__list:hover .list__price span {
+        @media (min-width: $screensz1) {
+            color: #172755;
+        }
+    }
+
+    &__list:hover .list__order {
+        @media (min-width: $screensz1) {
+            background-color: #EF2A82;
+            border: none;
+        }
+    }
 }
 
 .swiper {
     width: 100%;
-    height: 440px;
+    height: 358px;
     background-color: transparent;
     margin: 0 auto;
     
-    @media (max-width: 767px) {
-    } 
+    @media (min-width: $screensz1) {
+        height: 440px;
+    }
 }
 
 .list {
     &__header {
-        margin-top: 35px;
         font-size: 25px;
         line-height: 29px;
         font-weight: 700;
-
+        margin-top: 35px;
         @media (min-width: $screensz1) {
             margin-top: 50px;
             color: #FFF;
+        }
+    }
+
+    &__header:hover {
+        @media (min-width: $screensz1) {
+            
         }
     }
 
@@ -121,8 +160,6 @@ $screensz1: 1200px;
         color: #8794BA;
         margin-top: 7px;
         line-height: 18px;
-        position: relative;
-        width: 280px;
         text-align: center;
 
         @media (min-width: $screensz1) {
@@ -132,29 +169,23 @@ $screensz1: 1200px;
         }
     }
 
-    &__description::after {
-        content: "";
-        background-image: url(../img/splitter.svg);
-        width: 220px;
+    &__divider {
+        display: block;
+        background: #D3D9E9;
         height: 1px;
-        position: absolute;
-        top: 48px;
-        left: 30px;
-
-        @media (min-width:$screensz1) {
-            top: 64px;
-        }
+        width: 220px;
+        margin-top: 30px;
     }
 
     &__price {
-        margin-top: 51px;
+        margin-top: 20px;
         font-size: 60px;
         line-height: 70px;
         font-weight: 700;
         color: #172755;
 
         @media (min-width: $screensz1) {
-            margin-top: 66px;
+            margin-top: 28px;
             color:#fff;
         }
     }
@@ -196,7 +227,7 @@ $screensz1: 1200px;
         border: 1px solid #2A407C;
 
         @media (min-width: $screensz1) {
-            margin-top: 40px;
+            margin-top: 56px;
         }
 
         @media (min-width: 300px) and (max-width: $screensz1) {
@@ -213,34 +244,29 @@ element:last-child.style {
     margin-right: 0;
 }
 
-.swiper-slide-active {
-    background-color: #fff;
-}
-
-.swiper-slide-active .list__header {
-    color: #172755;
-}
-
-.swiper-slide-active .list__price {
-    color:#172755;
-}
-
-.swiper-slide-active .list__price span {
-    color:#172755;
-}
-
 .swiper-slide-active .list__order {
-    background-color: #EF2A82;
-    border: none;
-    color: #fff;
+    @media (max-width: $screensz1) {
+        background-color: #EF2A82;
+        border: none;
+        color: #fff;
+    } 
 }
 
 .swiper-slide-active .list__order:hover {
-    transform:scale(1.1);
-    transition: all 0.3s ease 0s;
+    @media (max-width: $screensz1) {
+        transform:scale(1.1);
+        transition: all 0.3s ease 0s;
+    } 
 }
 
 .page-footer {
+    margin-top: 164px;
+    margin-bottom: 100px;
+
+    @media (max-width: $screensz1) {
+        margin-top: 90px;
+        margin-bottom: 45px;
+    }
 
     &__wrapper {
         margin: 0 auto;
@@ -249,10 +275,7 @@ element:last-child.style {
 
     &__body {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        margin-top: 90px;
-        margin-bottom: 48px;
         position: relative;
         justify-content: space-between;
 
@@ -267,9 +290,13 @@ element:last-child.style {
         width: 100%;
         height: 1px;
         position: absolute;
-        top: -45px;
+        top: -63px;
         left: 0px;
         color: #2A407C;
+
+        @media (max-width: $screensz1) {
+            top: -45px;
+        }
     }
 
     &__logo {
@@ -289,7 +316,6 @@ element:last-child.style {
 
         @media (min-width:$screensz1) {
             display: flex;
-            flex-direction: row;
             width: 293px;
             justify-content: space-between;
         }
@@ -300,12 +326,11 @@ element:last-child.style {
     }
 
     &__item a:hover {
-        text-decoration: underline;
+        color: #FFF;
     }
 
     &__social {
         display: flex;
-        flex-direction: row;
         width: 134px;
         justify-content: space-between;
     }
@@ -317,7 +342,6 @@ element:last-child.style {
 }
 
 .social a .fa:hover {
-    transform: scale(1.2);
     transition: all 0.4s ease 0s;
     color: #FFF;
 }
