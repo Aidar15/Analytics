@@ -80,7 +80,7 @@ body._lock {
   justify-content: space-between;
   align-items: center;
   height: 140px;
-  max-width: 1181px;
+  max-width: 1180px;
   padding: 0 50px;
   margin: 0 auto;
 }
@@ -298,6 +298,7 @@ body._lock {
   box-shadow: 0px 18px 90px -15px rgba(25, 42, 89, 0.4);
   border-radius: 5px;
   padding: 10px 10px;
+  z-index: 5;
 }
 @media (min-width: 960px) {
   .main-nav__sub-list {
@@ -326,6 +327,9 @@ body._lock {
     text-transform: uppercase;
     padding-left: 0;
   }
+}
+.main-nav__sub-link:hover {
+  text-decoration: underline;
 }
 .main-nav__arrow {
   display: none;
@@ -590,7 +594,8 @@ body._touch .main-nav__list > li .main-nav__arrow {
 }
 .stats__try:hover {
   transition: all 0.3s ease 0s;
-  transform: scale(1.1);
+  background-color: #fff;
+  color: #EF2A82;
 }
 
 .main-blog__wrapper {

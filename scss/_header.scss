@@ -30,7 +30,7 @@ $screensz1: 960px;
         justify-content: space-between;
         align-items: center;
         height: 140px;
-        max-width: 1181px;
+        max-width: 1180px;
         padding: 0 50px;
         margin: 0 auto;
         
@@ -249,7 +249,7 @@ $screensz1: 960px;
         box-shadow: 0px 18px 90px -15px rgba(25, 42, 89, 0.4);
         border-radius: 5px;
         padding: 10px 10px;
-        
+        z-index: 5;
         @media (min-width:$screensz1) {
             display: none;
         }
@@ -276,6 +276,10 @@ $screensz1: 960px;
             text-transform: uppercase;
             padding-left: 0;
         }
+    }
+
+    &__sub-link:hover {
+        text-decoration: underline;
     }
 
     &__arrow {
@@ -554,6 +558,7 @@ body._touch .main-nav__list > li .main-nav__arrow {
 
     &__try:hover {
         transition: all 0.3s ease 0s;
-        transform: scale(1.1);
+        background-color: #fff;
+        color:#EF2A82;
     }
 }
